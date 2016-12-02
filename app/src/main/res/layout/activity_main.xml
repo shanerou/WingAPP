@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+  <com.hjo.wingapp.NoScrollViewPager
+      android:id="@+id/viewpager"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      >
+  </com.hjo.wingapp.NoScrollViewPager>
+
+    <LinearLayout
+        android:id="@+id/layout_button"
+        app:layout_behavior="@string/bye_burger_bottom_behavior"
+        android:layout_gravity="bottom"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:orientation="horizontal"
+        android:background="@color/colorPrimary"
+
+        >
+
+      <LinearLayout
+          android:id="@+id/home"
+          android:layout_width="0dp"
+          android:layout_weight="1"
+          android:orientation="vertical"
+          android:layout_height="match_parent"
+          android:gravity="center">
+        <ImageView
+            android:id="@+id/home_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/forecastwarning_w"/>
+
+
+      </LinearLayout>
+
+      <LinearLayout
+          android:id="@+id/search"
+          android:layout_width="0dp"
+          android:layout_weight="1"
+          android:orientation="vertical"
+          android:layout_height="match_parent"
+          android:gravity="center">
+        <ImageView
+            android:id="@+id/search_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/excellent"/>
+
+
+      </LinearLayout>
+
+      <LinearLayout
+          android:id="@+id/me"
+          android:layout_width="0dp"
+          android:layout_weight="1"
+          android:orientation="vertical"
+          android:layout_height="match_parent"
+          android:gravity="center">
+        <ImageView
+            android:id="@+id/me_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/compare"/>
+
+
+      </LinearLayout>
+
+      <LinearLayout
+          android:id="@+id/setting"
+          android:layout_width="0dp"
+          android:layout_weight="1"
+          android:orientation="vertical"
+          android:layout_height="match_parent"
+          android:gravity="center">
+        <ImageView
+            android:id="@+id/setting_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/analysis"/>
+
+
+      </LinearLayout>
+
+    </LinearLayout>
+
+    <android.support.design.widget.TabLayout
+        app:layout_behavior="@string/bye_burger_title_behavior"
+        android:id="@+id/tabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#fff"
+        app:tabGravity="fill"
+        style="@style/MyTabLayoutStyle"
+        app:tabIndicatorColor="@color/colorPrimary"
+        app:tabSelectedTextColor="@color/colorPrimary"
+        app:tabTextColor="#888888"
+        />
+
+
+  <android.support.design.widget.FloatingActionButton
+      android:id="@+id/floatButton"
+      app:layout_behavior="@string/bye_burger_float_behavior"
+      android:layout_gravity="bottom|right"
+      app:backgroundTint="@color/colorPrimary"
+      android:layout_marginBottom="60dp"
+      android:layout_marginRight="10dp"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      />
+</android.support.design.widget.CoordinatorLayout>
